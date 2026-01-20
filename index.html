@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<script src='//libtl.com/sdk.js' data-zone='10490791' data-sdk='show_10490791'></script>
   <meta charset="UTF-8">
   <title>USA Rewards</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -41,7 +41,23 @@
 
 <script>
   function showReward(){
-    alert("Rewarded Ad will show here (Monetag)");
+    alert<script>
+  function showReward() {
+    if (typeof show_telegram_rewarded_ad === 'function') {
+      show_telegram_rewarded_ad({
+        onSuccess: function () {
+          alert("🎉 Reward unlocked!");
+        },
+        onError: function () {
+          alert("❌ Ad failed, try again later");
+        }
+      });
+    } else {
+      alert("Ad not loaded yet, wait few seconds");
+    }
+  }
+</script>
+
   }
 </script>
 
