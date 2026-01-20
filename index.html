@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USA Rewards</title>
+
+  <!-- Telegram Mini App SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <!-- Monetag Telegram Mini App Rewarded Popup SDK -->
+  <script
+    src="//libtl.com/sdk.js"
+    data-zone="10490791"
+    data-sdk="show_10490791">
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px;
+    }
+    .box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 360px;
+      margin: auto;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: #000;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>🎁 USA Spin & Win</h2>
+  <p>Watch ad & unlock rewards</p>
+  <button onclick="showReward()">SPIN NOW</button>
+</div>
+
+<script>
+  function showReward() {
+    if (typeof window.show_10490791 === "function") {
+      window.show_10490791('pop')
+        .then(() => {
+          alert("🎉 Reward unlocked!");
+        })
+        .catch(() => {
+          alert("❌ Ad not available right now. Try again later.");
+        });
+    } else {
+      alert("Ad system loading… please wait 5–10 seconds.");
+    }
+  }
+</script>
+
+</body>
+</html>
